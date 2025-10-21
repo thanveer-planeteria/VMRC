@@ -1,0 +1,315 @@
+//componenets (button, anchor tags, heading tags etc)
+body {
+    color: $black;
+    font-size: 18px;
+    @include primary-font;
+    background-color: #FDFAF6;
+    &.wp-admin {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+}
+
+html {
+    font-size: 100%;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    @include primary-font;
+}
+
+h1,
+.h1 {
+    font-size: 46px;
+    color: $site-black;
+    font-weight: 600;
+    margin-bottom: 16px;
+    line-height: normal
+}
+
+h2,
+.h2 {
+    font-size: 36px;
+    color: #273A4C;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+h3,
+.h3 {
+    font-size: 24px;
+    color: $site-black;
+    font-weight: 600;
+}
+
+h4,
+.h4 {
+    font-size: 22px;
+    color: $site-black;
+    font-weight: 600;
+}
+
+h5,
+.h5 {
+    font-size: 20px;
+    color: $black;
+    font-weight: 600;
+    text-transform: none;
+}
+
+h6,
+.h6 {
+    font-size: 18px;
+    text-transform: none;
+    font-weight: 600;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    display: block;
+}
+
+p {
+    line-height: normal;
+    font-size: 18px;
+    font-weight: 400;
+    color: $black;
+    @include primary-font;
+    margin-bottom: 24px;
+}
+
+p.has-large-font-size {
+    font-size: 26px !important;
+    line-height: 36px;
+}
+
+p+ul,
+p+ol {
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+
+a {
+    color: $link-color;
+    font-weight: 600;
+    &:hover {
+        color: $link-hover;
+        text-decoration: none;
+        text-decoration-style: solid !important;
+    }
+}
+
+p a {
+    color: $link-color;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-style: solid !important;
+    &:hover {
+        color: $link-hover;
+        text-decoration: none;
+    }
+}
+
+p a:hover {}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+//general rules
+.link {
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    img {
+        max-width: 18px;
+        margin-left: 6px;
+    }
+    &:hover {
+        color: $primary;
+    }
+}
+
+.container-fluid {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.btn_sm {
+    color: $white;
+    padding: 10px 32px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    background: $primary;
+    font-family: $primary-font;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    &:hover,
+    &:focus-within {
+        background: $hover-purple;
+        color: #fff;
+        text-decoration: none;
+        img {}
+    }
+    img {
+        margin-left: 7px;
+    }
+    &:focus {
+        color: #000;
+    }
+    &.outline_btn{
+        background: transparent;
+        border: 1px solid $white;
+        color: $white;
+        padding: 10px 40px;
+        &:hover{
+            background: #273A4C;
+            color: $white;
+            border-color: #273A4C;
+        }
+    }
+}
+
+.container {
+    max-width: 1230px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+video {
+    max-width: 100%;
+}
+
+.form-control {
+    min-height: 45px;
+    background-color: $white;
+    border-radius: 0px;
+
+    border: 2px solid #C5BFBA;
+}
+
+.no-margin {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.sm-gutters>.col,
+.sm-gutters>[class*="col-"] {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+select {
+    min-height: 40px;
+    background-image: url(../img/select-arrow.svg);
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: top 14px right 12px;
+    min-width: 130px;
+    background-size: 18px;
+    color: $black;
+    border: 1px solid #000;
+    border-radius: 5px;
+    &.form-control {
+        color: #555554;
+        cursor: pointer;
+    }
+}
+
+.search-box {
+    .btn {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        height: 100%;
+        z-index: 9;
+        transition: none;
+        &:hover {
+            img {}
+        }
+    }
+    .form-control {
+        color: #000;
+    }
+     ::-webkit-input-placeholder {
+        color: #000;
+    }
+     ::-moz-placeholder {
+        color: #000;
+    }
+     :-ms-input-placeholder {
+        color: #000;
+    }
+     :-moz-placeholder {
+        color: #000;
+    }
+}
+
+label.title {
+    font-weight: 400;
+    @include primary-font;
+    font-size: 16px;
+    color: $site-black;
+    margin-bottom: 0px;
+}
+
+::-webkit-input-placeholder {
+    color: #36393f !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+::-moz-placeholder {
+    color: #36393f !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+:-ms-input-placeholder {
+    color: #36393f !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+
+:-moz-placeholder {
+    color: #36393f !important;
+    opacity: 1 !important;
+    font-size: 14px !important;
+    font-weight: normal !important;
+}
+.mb_24{
+    margin-bottom: 24px;
+}
+
+.mb_40{
+    margin-bottom: 40px;
+}
+.mb_16{
+    margin-bottom: 16px;
+}
