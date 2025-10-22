@@ -87,7 +87,7 @@ p {
     line-height: normal;
     font-size: 18px;
     font-weight: 400;
-    color: $black;
+    color: #2F2F2F;
     @include primary-font;
     margin-bottom: 24px;
 }
@@ -153,7 +153,7 @@ strong {
 
 .btn_sm {
     color: $white;
-    padding: 10px 32px;
+    padding: 13px 32px;
     display: inline-block;
     text-align: center;
     position: relative;

@@ -384,14 +384,37 @@ $(".kb-table").each(function() {
 // move top menu
 
 $(document).ready(function () {
+  // Store original positions before any movement
+  const originalPositions = {
+    topMenuRight: {
+      parent: $('.top_menu_right').parent(),
+      index: $('.top_menu_right').index()
+    },
+    publicMeeting: {
+      parent: $('.public_meeting').parent(),
+      index: $('.public_meeting').index()
+    },
+    allEventBtn: {
+      parent: $('.all_event_btn').parent(),
+      index: $('.all_event_btn').index()
+    }
+  };
+
   function moveTopMenu() {
     if ($(window).width() < 1200) {
       $('.top_menu_right').insertBefore('.nav_bottom');
       $('.public_meeting').insertAfter('.transparency_btn');
       $('.all_event_btn').insertAfter('.evtrow');
     } else {
-   
-      $('.top_menu_right').appendTo('.original-parent-selector');
+      // Restore each element to its original position
+      $.each(originalPositions, function (key, obj) {
+        const el = $('.' + key.replace(/[A-Z]/g, m => '_' + m.toLowerCase())); // convert camelCase back to class selector
+        if (obj.parent.children().length > obj.index) {
+          obj.parent.children().eq(obj.index).before(el);
+        } else {
+          obj.parent.append(el);
+        }
+      });
     }
   }
 
@@ -403,4 +426,5 @@ $(document).ready(function () {
     moveTopMenu();
   });
 });
+
 

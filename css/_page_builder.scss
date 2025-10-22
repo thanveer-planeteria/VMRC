@@ -104,7 +104,7 @@
 }
 
 .main_wrapper {
-    padding-top: 90px;
+    padding-top: 84px;
     p {
         margin-bottom: 24px;
     }
@@ -322,8 +322,8 @@
     justify-content: center;
     .img_btn_col {
         margin-bottom: 15px;
-        padding-left: 12px;
-        padding-right: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
         @include md {
             padding-left: 10px;
             padding-right: 10px;
@@ -437,7 +437,11 @@
                 }
             }
         }
-        &:hover {}
+        &:hover {
+            outline: 2px solid  #022F57;
+            background: #FFF;
+            box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+        }
         &.no-img {
             .btn_sm {
                 position: absolute;
@@ -449,6 +453,7 @@
             position: relative;
             img {
                 width: 100%;
+                aspect-ratio: 3 / 2;
             }
         }
         .text_card_block {
@@ -609,6 +614,7 @@ h2+.expand_img_grid {
     .expand_img {
         img {
             width: 100%;
+            aspect-ratio: 1/1;
         }
     }
     .spacer {
@@ -730,6 +736,17 @@ h2+.expand_img_grid {
         /* width: -webkit-max-content;
         width: -moz-max-content;
         width: max-content;*/
+        p{
+            text-align: center;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color:  #2F2F2F;
+            font-family: $primary-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%;
+        }
     }
     .owl-carousel .owl-item img {
         width: 100%;
@@ -855,9 +872,9 @@ h2+.expand_img_grid {
 }
 
 .simple_list_col {
-    padding-left: 12px;
-    padding-right: 12px;
-    margin-bottom: 24px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 12px;
     a {
         color: #fff;
         display: -webkit-box;
@@ -1695,6 +1712,8 @@ h2+.expand_img_grid {
         padding: 32px;
     }
     a{
+        color: #2F2F2F;
+        font-weight: 500;
         &:hover{
             .button_card_box{
                 background-color: #DBDEF0;
@@ -1703,7 +1722,10 @@ h2+.expand_img_grid {
         }
     }
 }
-
+.col-md-4.button_card_col {
+    padding-left: 6px;
+    padding-right: 6px;
+}
 @media (max-width:767px) {
     .kt-accordion-panel-inner .wp-block-media-text+section {
         padding-top: 0px;

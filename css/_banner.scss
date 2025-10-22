@@ -179,7 +179,8 @@
     a {
         text-decoration: none;
         &:hover {
-            text-decoration: none;
+            text-decoration: underline;
+            text-decoration-color: $white;
         }
     }
     .btn_card {
@@ -261,6 +262,9 @@
         &:hover{
             .btn_card{
                     background: rgba(8, 124, 192, 0.60);
+                    img{
+                        filter: brightness(0) invert(1);
+                    }
                 }
             }
         }
